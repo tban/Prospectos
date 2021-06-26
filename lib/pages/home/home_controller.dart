@@ -1,6 +1,7 @@
 import 'dart:async';
 import 'dart:ui';
 
+import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:prospectos/api/cimaapi.dart';
 import 'package:prospectos/models/apiresultbyname/resultado.dart';
@@ -59,6 +60,8 @@ class HomeController extends GetxController {
         forceWebView: true,
       );
     } else {
+      Get.snackbar("Aviso", "No es posible abrir la URL",
+          colorText: Colors.white, backgroundColor: Colors.red);
       throw 'No es posible abrir $url';
     }
   }

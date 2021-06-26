@@ -37,7 +37,7 @@ class HomePage extends StatelessWidget {
 
   Widget buildSearch(HomeController _) => SearchWidget(
         text: _.query?.value ?? "",
-        hintText: 'Texto a buscar',
+        hintText: 'Medicamento a buscar',
         onChanged: _.searchItem,
       );
 
