@@ -11,12 +11,14 @@ class Resultado {
     this.nregistro,
     this.nombre,
     this.receta,
+    this.generico,
     this.docs,
     this.fotos,
   );
   String? nregistro;
   String? nombre;
   bool receta;
+  bool generico;
   List<Doc>? docs;
   List<Foto>? fotos;
 
@@ -29,6 +31,7 @@ class Resultado {
         'nregistro': instance.nregistro ?? "",
         'nombre': instance.nombre ?? "",
         'receta': instance.receta,
+        'generico': instance.generico,
         'docs': instance.docs ?? docs,
         'fotos': instance.fotos ?? fotos,
       };

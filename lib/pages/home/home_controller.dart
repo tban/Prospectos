@@ -12,6 +12,7 @@ class HomeController extends GetxController {
   Timer? debouncer;
   RxString? query;
   RxList<Resultado>? resultados;
+  RxBool isLoading = false.obs;
 
   @override
   void onInit() async {
@@ -46,8 +47,10 @@ class HomeController extends GetxController {
 
   //
   searchItem(String query) async => debounce(() async {
+        if (query.length == 0) return;
+        isLoading.value = true;
         resultados = await CimaApi.getByName(query).then((value) => value.obs);
-
+        isLoading.value = false;
         update(["apifromname"]);
       });
   //

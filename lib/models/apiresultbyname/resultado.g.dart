@@ -11,6 +11,7 @@ Resultado _$ResultadoFromJson(Map<String, dynamic> json) {
     json['nregistro'] as String?,
     json['nombre'] as String?,
     json['receta'] as bool,
+    json['generico'] as bool,
     (json['docs'] as List<dynamic>?)
         ?.map((e) => Doc.fromJson(e as Map<String, dynamic>))
         .toList(),
@@ -24,6 +25,7 @@ Map<String, dynamic> _$ResultadoToJson(Resultado instance) => <String, dynamic>{
       'nregistro': instance.nregistro,
       'nombre': instance.nombre,
       'receta': instance.receta,
+      'generico': instance.generico,
       'docs': instance.docs,
       'fotos': instance.fotos,
     };
