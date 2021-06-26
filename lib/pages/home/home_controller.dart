@@ -1,5 +1,6 @@
 import 'dart:async';
 import 'dart:ui';
+import 'dart:io' show Platform;
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -56,8 +57,9 @@ class HomeController extends GetxController {
     if (await canLaunch(url)) {
       await launch(
         url,
-        forceSafariVC: true,
-        forceWebView: true,
+        forceSafariVC: Platform.isAndroid ? false : true,
+        forceWebView: Platform.isAndroid ? false : true,
+        enableJavaScript: true,
       );
     } else {
       Get.snackbar("Aviso", "No es posible abrir la URL",

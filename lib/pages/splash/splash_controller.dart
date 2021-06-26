@@ -7,7 +7,7 @@ class SplashController extends GetxController {
     super.onReady();
     //cargar parámetros y cuando es loading true
     Future.delayed(
-      Duration(seconds: 1),
+      Duration(seconds: 3),
       () {
         //Una vez cargados. Get.off elimina la página Splash de la pila
         Get.off(() => HomePage(), transition: Transition.zoom);

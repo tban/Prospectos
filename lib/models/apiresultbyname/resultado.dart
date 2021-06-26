@@ -10,11 +10,13 @@ class Resultado {
   Resultado(
     this.nregistro,
     this.nombre,
+    this.receta,
     this.docs,
     this.fotos,
   );
   String? nregistro;
   String? nombre;
+  bool receta;
   List<Doc>? docs;
   List<Foto>? fotos;
 
@@ -26,6 +28,7 @@ class Resultado {
       <String, dynamic>{
         'nregistro': instance.nregistro ?? "",
         'nombre': instance.nombre ?? "",
+        'receta': instance.receta,
         'docs': instance.docs ?? docs,
         'fotos': instance.fotos ?? fotos,
       };

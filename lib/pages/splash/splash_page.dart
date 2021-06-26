@@ -9,7 +9,26 @@ class SplashPage extends StatelessWidget {
       dispose: (_) {},
       init: SplashController(),
       builder: (_) => Scaffold(
-        body: Container(),
+        body: Container(
+          child: Center(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                LinearProgressIndicator(
+                  minHeight: 15,
+                ),
+                Text(
+                  "Prospectos",
+                  textScaleFactor: 3,
+                  style: TextStyle(color: Colors.blueGrey),
+                ),
+                LinearProgressIndicator(
+                  minHeight: 15,
+                ),
+              ],
+            ),
+          ),
+        ),
       ),
     );
   }

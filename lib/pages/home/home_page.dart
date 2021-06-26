@@ -42,15 +42,26 @@ class HomePage extends StatelessWidget {
       );
 
   Widget buildItem(HomeController _, Resultado resultado) => ListTile(
-        leading: Image.network(
-          resultado.fotos?[0].url ??
-              "https://image.flaticon.com/icons/png/512/883/883356.png",
-          fit: BoxFit.cover,
-          width: 50,
-          height: 50,
-        ),
-        onTap: () => _.openProspecto(resultado),
-        title: Text(resultado.nombre!),
-        subtitle: Text(resultado.nregistro!),
-      );
+      leading: Image.network(
+        resultado.fotos?[0].url ??
+            "https://image.flaticon.com/icons/png/512/883/883356.png",
+        fit: BoxFit.cover,
+        width: 50,
+        height: 50,
+      ),
+      onTap: () => _.openProspecto(resultado),
+      title: Text(resultado.nombre!),
+      subtitle: resultado.receta
+          ? Text(
+              "Con receta",
+              style: TextStyle(
+                color: Colors.red,
+              ),
+            )
+          : Text(
+              "Sin receta",
+              style: TextStyle(
+                color: Colors.green,
+              ),
+            ));
 }
