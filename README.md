@@ -4,7 +4,7 @@ Un proyecto de la comunidad Flutter en Canarias.
 
 ## Getting Started
 
-TODO:
+PROCESO:
 
 - ¿Gestor de Estados?
   Tban: he iniciado la implementación con GetX. Como la app es simple podemos probar con otros gestores.
@@ -18,3 +18,4 @@ TODO:
 - Abrir url prospecto
   Tban: https://pub.dev/packages/url_launcher
 
+TODO:
