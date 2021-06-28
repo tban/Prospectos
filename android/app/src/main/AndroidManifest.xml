@@ -1,5 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.prospectos">
+    package="es.tban.prospectos">
      <!-- Nest within the manifest element, not the application element-->
     <queries>
         <intent>
